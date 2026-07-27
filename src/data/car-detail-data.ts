@@ -116,7 +116,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     },
     description: 'Restauramos el habitáculo a estado 0km. Desinfectamos a vapor de alta temperatura, realizamos inyección-extracción en tapizados y aplicamos acondicionadores nutritivos sin brillo grasoso.',
     features: [
-      'Inyección-extracción de alfombras, techo y butacas',
+      'Inyección-extracción de alfombras, techo y tapizados',
       'Desinfección a vapor a 140°C en conductos de aire y tapizados',
       'Nutrición y acondicionamiento mate para superficies de cuero',
       'Protección UV para plásticos del torpedo y consola',
@@ -178,8 +178,8 @@ export const BEFORE_AFTER_PRESETS: BeforeAfterPreset[] = [
     serviceName: 'Tratamiento Cerámico 9H',
     beforeLabel: 'Pintura Opaca con Swirls Severos',
     afterLabel: 'Acabado Espejo Líquido 9H',
-    beforeImg: '/paint_before.jpg',
-    afterImg: '/paint_after.jpg',
+    beforeImg: '/img/paint_before.jpg',
+    afterImg: '/img/paint_after.jpg',
     description: 'Eliminación del 95% de rayas circulares producidas por lavados inadecuados y sellado cerámico 9H.',
   },
   {
@@ -189,8 +189,8 @@ export const BEFORE_AFTER_PRESETS: BeforeAfterPreset[] = [
     serviceName: 'Limpieza de Tapizados & Vapor',
     beforeLabel: 'Cuero Sucio con Brillo Grasoso',
     afterLabel: 'Cuero Limpio y Mate Original 0km',
-    beforeImg: '/interior_before.jpg',
-    afterImg: '/interior_after.jpg',
+    beforeImg: '/img/interior_before.jpg',
+    afterImg: '/img/interior_after.jpg',
     description: 'Inyección-extracción a vapor y tratamiento nutritivo mate para tapizados de cuero premium.',
   },
   {
@@ -200,8 +200,8 @@ export const BEFORE_AFTER_PRESETS: BeforeAfterPreset[] = [
     serviceName: 'Cerámico 9H Anti-Barro',
     beforeLabel: 'Superficie Seca y Contaminada',
     afterLabel: 'Escudo Hidrofóbico Repelente',
-    beforeImg: '/truck_before.jpg',
-    afterImg: '/truck_after.jpg',
+    beforeImg: '/img/truck_before.jpg',
+    afterImg: '/img/truck_after.jpg',
     description: 'Protección cerámica ultra-resistente para camionetas 4x4 expuestas a ruta y tierra en Córdoba.',
   },
 ];
