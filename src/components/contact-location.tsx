@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { MapPin, Clock, MessageCircle, ShieldCheck, ExternalLink } from 'lucide-react';
+import { MapPin, Clock } from 'lucide-react';
 import { BRAND_INFO } from '@/data/car-detail-data';
 
 export const ContactLocation: React.FC = () => {
@@ -67,10 +67,9 @@ export const ContactLocation: React.FC = () => {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 shadow-lg shadow-emerald-950/50 transition-all duration-300 active:scale-95"
+                className="mt-5 w-full inline-flex items-center justify-center py-3 px-4 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 shadow-lg shadow-emerald-950/50 transition-all duration-300 active:scale-95"
               >
-                <MessageCircle className="w-4 h-4 fill-white/20" />
-                <span>Abrir Chat de WhatsApp</span>
+                Abrir Chat de WhatsApp
               </a>
             </div>
 

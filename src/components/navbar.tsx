@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Shield, MessageCircle } from 'lucide-react';
+import { Menu, X, Shield } from 'lucide-react';
 import { BRAND_INFO } from '@/data/car-detail-data';
 
 export const Navbar: React.FC = () => {
@@ -73,10 +73,9 @@ export const Navbar: React.FC = () => {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 shadow-md shadow-emerald-950/50 transition-all duration-300 active:scale-95"
+              className="inline-flex items-center px-4 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 shadow-md shadow-emerald-950/50 transition-all duration-300 active:scale-95"
             >
-              <MessageCircle className="w-4 h-4 fill-white/20" />
-              <span>Turnos WhatsApp</span>
+              Turnos WhatsApp
             </a>
           </div>
 
@@ -122,10 +121,9 @@ export const Navbar: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center gap-2.5 py-3.5 px-4 text-xs font-extrabold text-white bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 rounded-xl shadow-lg shadow-emerald-950/60 active:scale-95 transition-all"
+                className="w-full flex items-center justify-center py-3.5 px-4 text-xs font-extrabold text-white bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 rounded-xl shadow-lg shadow-emerald-950/60 active:scale-95 transition-all"
               >
-                <MessageCircle className="w-4.5 h-4.5 fill-white/20" />
-                <span>Agendar por WhatsApp</span>
+                Agendar por WhatsApp
               </a>
             </div>
           </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Sparkles, MessageCircle, MapPin } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 import { BRAND_INFO } from '@/data/car-detail-data';
 
 export const HeroSection: React.FC = () => {
@@ -43,7 +43,7 @@ export const HeroSection: React.FC = () => {
           Detailing Profesional en Córdoba. Tratamientos Cerámicos 9H, pulido corrección de laca, limpieza técnica de interiores y PPF.
         </p>
 
-        {/* Action Buttons */}
+        {/* Clean Text Action Buttons */}
         <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto px-4 sm:px-0">
           <a
             href={`https://wa.me/${BRAND_INFO.whatsappNumber}?text=${encodeURIComponent(
@@ -51,18 +51,16 @@ export const HeroSection: React.FC = () => {
             )}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 shadow-xl shadow-purple-950/80 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
+            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 shadow-xl shadow-purple-950/80 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
           >
-            <MessageCircle className="w-5 h-5 fill-white/20" />
-            <span>Consultar Turno WhatsApp</span>
+            Consultar Turno WhatsApp
           </a>
 
           <a
             href="#cotizador"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-sm font-semibold text-white glass-panel border border-purple-500/50 hover:border-purple-400 transition-all active:scale-95 shadow-lg bg-[#07070a]/70"
+            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-sm font-semibold text-white glass-panel border border-purple-500/50 hover:border-purple-400 transition-all active:scale-95 shadow-lg bg-[#07070a]/70"
           >
-            <Sparkles className="w-4 h-4 text-purple-400" />
-            <span>Cotizar Mi Auto</span>
+            Cotizar Mi Auto
           </a>
         </div>
 

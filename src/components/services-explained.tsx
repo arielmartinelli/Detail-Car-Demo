@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { SERVICES_DATA } from '@/data/car-detail-data';
-import { Sparkles, CheckCircle2, Clock, Award, ArrowRight } from 'lucide-react';
+import { Sparkles, CheckCircle2, Clock, Award } from 'lucide-react';
 
 export const ServicesExplained: React.FC = () => {
   return (
@@ -67,10 +67,9 @@ export const ServicesExplained: React.FC = () => {
               <div className="pt-4 border-t border-purple-950/60 mt-4">
                 <a
                   href="#cotizador"
-                  className="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl text-xs font-bold text-white bg-purple-950/70 hover:bg-purple-600 border border-purple-500/30 transition-all"
+                  className="w-full inline-flex items-center justify-center py-2 px-3 rounded-xl text-xs font-bold text-white bg-purple-950/70 hover:bg-purple-600 border border-purple-500/30 transition-all"
                 >
-                  <span>Cotizar Trabajo</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  Cotizar Trabajo
                 </a>
               </div>
 
