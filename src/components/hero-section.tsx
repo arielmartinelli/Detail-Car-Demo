@@ -8,7 +8,7 @@ export const HeroSection: React.FC = () => {
   return (
     <section 
       id="inicio" 
-      className="relative pt-32 pb-24 sm:pt-40 sm:pb-32 overflow-hidden bg-cover bg-center bg-no-repeat border-b border-purple-950/50"
+      className="relative w-full min-h-[100dvh] flex flex-col justify-center items-center overflow-hidden bg-cover bg-center bg-no-repeat border-b border-purple-950/50 pt-20 pb-12"
       style={{
         backgroundImage: `linear-gradient(to bottom, rgba(7, 7, 10, 0.65) 0%, rgba(7, 7, 10, 0.55) 50%, rgba(7, 7, 10, 0.85) 100%), url('https://t3.ftcdn.net/jpg/15/25/01/54/360_F_1525015475_7EBNENsdhtJFRgk3uVi3NQMezUuT2kUM.jpg')`
       }}
@@ -16,9 +16,9 @@ export const HeroSection: React.FC = () => {
       
       {/* Background radial purple glow overlay */}
       <div className="absolute inset-0 bg-radial-purple pointer-events-none" />
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/15 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/15 rounded-full blur-[150px] pointer-events-none" />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center justify-center my-auto">
         
         {/* Status Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-950/90 border border-purple-500/50 text-purple-300 text-xs font-semibold mb-6 backdrop-blur-md shadow-xl shadow-purple-950/60">
@@ -30,7 +30,7 @@ export const HeroSection: React.FC = () => {
           <span>📍 Córdoba, Argentina • Turnos por WhatsApp</span>
         </div>
 
-        {/* Headline with Drop Shadow for Maximum Legibility */}
+        {/* Headline with Drop Shadow */}
         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
           Más que un lavado,{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-300 to-indigo-300">
@@ -44,7 +44,7 @@ export const HeroSection: React.FC = () => {
         </p>
 
         {/* Action Buttons */}
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 px-4 sm:px-0">
+        <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto px-4 sm:px-0">
           <a
             href={`https://wa.me/${BRAND_INFO.whatsappNumber}?text=${encodeURIComponent(
               'Hola BM Car Detail! Quisiera consultar la disponibilidad de turnos en Córdoba.'
@@ -67,7 +67,7 @@ export const HeroSection: React.FC = () => {
         </div>
 
         {/* Features pills bar */}
-        <div className="mt-12 inline-flex flex-wrap items-center justify-center gap-3 glass-panel px-6 py-3 rounded-2xl border border-purple-500/40 text-xs font-semibold text-slate-100 shadow-xl bg-[#07070a]/80">
+        <div className="mt-10 sm:mt-12 inline-flex flex-wrap items-center justify-center gap-3 glass-panel px-6 py-3 rounded-2xl border border-purple-500/40 text-xs font-semibold text-slate-100 shadow-xl bg-[#07070a]/80">
           <div className="flex items-center gap-1.5">
             <Shield className="w-4 h-4 text-purple-400" />
             <span>Cerámicos 9H Escritos</span>
