@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Sparkles, MessageCircle, MapPin, Shield } from 'lucide-react';
+import { Sparkles, MessageCircle, MapPin } from 'lucide-react';
 import { BRAND_INFO } from '@/data/car-detail-data';
 
 export const HeroSection: React.FC = () => {
@@ -64,18 +64,6 @@ export const HeroSection: React.FC = () => {
             <Sparkles className="w-4 h-4 text-purple-400" />
             <span>Cotizar Mi Auto</span>
           </a>
-        </div>
-
-        {/* Features pills bar */}
-        <div className="mt-10 sm:mt-12 inline-flex flex-wrap items-center justify-center gap-3 glass-panel px-6 py-3 rounded-2xl border border-purple-500/40 text-xs font-semibold text-slate-100 shadow-xl bg-[#07070a]/80">
-          <div className="flex items-center gap-1.5">
-            <Shield className="w-4 h-4 text-purple-400" />
-            <span>Cerámicos 9H Escritos</span>
-          </div>
-          <span className="text-purple-500">•</span>
-          <span>Inspección Digital de Laca</span>
-          <span className="text-purple-500">•</span>
-          <span className="text-emerald-400 font-bold">Atención en Córdoba</span>
         </div>
 
       </div>
