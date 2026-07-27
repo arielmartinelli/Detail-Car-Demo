@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #07070a;
+    --foreground: #f8fafc;
+    --card: #0e0f17;
+    --card-foreground: #f8fafc;
+    --popover: #0e0f17;
+    --popover-foreground: #f8fafc;
+    --primary: #a855f7;
+    --primary-foreground: #ffffff;
+    --secondary: #191629;
+    --secondary-foreground: #e2e8f0;
+    --muted: #121320;
+    --muted-foreground: #94a3b8;
+    --accent: #9333ea;
+    --accent-foreground: #ffffff;
+    --border: rgba(255, 255, 255, 0.08);
+    --ring: #a855f7;
+    --radius: 0.75rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #07070a;
+}
+::-webkit-scrollbar-thumb {
+  background: #231f38;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a855f7;
+}
+
+/* Glassmorphism & Glow Utilities */
+.glass-panel {
+  background: rgba(14, 15, 23, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  border-color: rgba(168, 85, 247, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(168, 85, 247, 0.25);
+  transform: translateY(-2px);
+}
+
+.neon-purple-glow {
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.25);
+}
+
+.neon-text-glow {
+  text-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+}
+
+.bg-radial-purple {
+  background: radial-gradient(ellipse 90% 60% at 50% -20%, rgba(147, 51, 234, 0.2), rgba(7, 7, 10, 0));
+}
+
+/* Floating Rising & Popping Bubble Animation */
+@keyframes bubbleFloat {
+  0% {
+    transform: translateY(0) scale(0.6);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  95% {
+    transform: translateY(-105vh) scale(1.3);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.8);
+    opacity: 0;
+  }
+}
+
+.animate-bubble-float {
+  animation-name: bubbleFloat;
+}
