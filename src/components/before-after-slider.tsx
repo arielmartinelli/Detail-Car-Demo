@@ -57,8 +57,8 @@ export const BeforeAfterSlider: React.FC = () => {
             Antes y <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-300">Después</span>
           </h2>
 
-          {/* Presets Tabs */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-2.5">
+          {/* Clean 3 Preset Options in a Single Line */}
+          <div className="mt-8 flex flex-row items-center justify-center gap-2 sm:gap-4 overflow-x-auto pb-1 max-w-full">
             {BEFORE_AFTER_PRESETS.map((preset) => (
               <button
                 key={preset.id}
@@ -66,7 +66,7 @@ export const BeforeAfterSlider: React.FC = () => {
                   setActivePreset(preset);
                   setSliderPosition(50);
                 }}
-                className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 ${
+                className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all duration-300 ${
                   activePreset.id === preset.id
                     ? 'bg-purple-600 text-white shadow-lg shadow-purple-600/30 border border-purple-400/40 scale-105'
                     : 'glass-panel text-slate-400 hover:text-white hover:bg-purple-950/40 border border-purple-900/30'
