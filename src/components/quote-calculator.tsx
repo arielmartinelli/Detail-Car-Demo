@@ -60,19 +60,19 @@ export const QuoteCalculator: React.FC = () => {
   };
 
   return (
-    <section id="cotizador" className="py-20 relative bg-radial-purple">
+    <section id="cotizador" className="py-24 relative bg-radial-purple">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Title */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-950/80 border border-purple-500/30 text-purple-300 text-xs font-semibold mb-3">
+        {/* Section Title with Enlarged Text */}
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-950/80 border border-purple-500/30 text-purple-300 text-xs font-semibold mb-4">
             <Sparkles className="w-3.5 h-3.5 text-purple-400" />
             <span>Calculadora en Tiempo Real</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
             Cotizá el Detallado de tu <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-300 to-indigo-300">Vehículo</span>
           </h2>
-          <p className="mt-2 text-slate-400 text-xs sm:text-sm">
+          <p className="mt-3 text-slate-400 text-sm sm:text-base">
             Seleccioná la categoría de tu vehículo y los tratamientos que deseas para calcular tu presupuesto estimado.
           </p>
         </div>

@@ -27,7 +27,7 @@ export const HeroSection: React.FC = () => {
       <div className="absolute inset-0 bg-radial-purple pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/15 rounded-full blur-[150px] pointer-events-none" />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center justify-center my-auto">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center justify-center my-auto">
         
         {/* Status Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-950/90 border border-purple-500/50 text-purple-300 text-xs font-semibold mb-6 backdrop-blur-md shadow-xl shadow-purple-950/60">
@@ -39,8 +39,8 @@ export const HeroSection: React.FC = () => {
           <span>📍 Córdoba, Argentina • Turnos por WhatsApp</span>
         </div>
 
-        {/* Headline with Drop Shadow */}
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+        {/* Enlarged Main Headline */}
+        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)]">
           Más que un lavado,{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-300 to-indigo-300">
             una transformación
@@ -48,7 +48,7 @@ export const HeroSection: React.FC = () => {
         </h1>
 
         {/* Subtitle */}
-        <p className="mt-5 text-base sm:text-xl text-slate-100 max-w-2xl mx-auto font-medium leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+        <p className="mt-6 text-lg sm:text-2xl text-slate-100 max-w-3xl mx-auto font-medium leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
           Detailing Profesional en Córdoba. Tratamientos Cerámicos 9H, pulido corrección de laca, limpieza técnica de interiores y PPF.
         </p>
 
@@ -60,14 +60,14 @@ export const HeroSection: React.FC = () => {
             )}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 shadow-xl shadow-purple-950/80 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
+            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-sm sm:text-base font-bold text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 shadow-xl shadow-purple-950/80 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
           >
             Consultar Turno WhatsApp
           </a>
 
           <a
             href="#cotizador"
-            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-sm font-semibold text-white glass-panel border border-purple-500/50 hover:border-purple-400 transition-all active:scale-95 shadow-lg bg-[#07070a]/70"
+            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-sm sm:text-base font-semibold text-white glass-panel border border-purple-500/50 hover:border-purple-400 transition-all active:scale-95 shadow-lg bg-[#07070a]/70"
           >
             Cotizar Mi Auto
           </a>

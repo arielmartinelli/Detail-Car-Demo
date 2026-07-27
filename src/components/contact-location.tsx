@@ -6,15 +6,16 @@ import { BRAND_INFO } from '@/data/car-detail-data';
 
 export const ContactLocation: React.FC = () => {
   return (
-    <section id="contacto" className="py-20 relative bg-[#07070a] border-t border-purple-950/40">
+    <section id="contacto" className="py-24 relative bg-[#07070a] border-t border-purple-950/40">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center max-w-2xl mx-auto mb-12">
+        {/* Section Title with Enlarged Text */}
+        <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="text-xs font-mono uppercase tracking-widest text-purple-400">Atención en Córdoba</span>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-white mt-1">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white mt-1">
             Ubicación & <span className="text-purple-400">Contacto</span>
           </h2>
-          <p className="mt-2 text-slate-400 text-xs sm:text-sm">
+          <p className="mt-3 text-slate-400 text-sm sm:text-base">
             Atendemos con turno previo en Córdoba Capital para garantizar la dedicación exclusiva que tu auto requiere.
           </p>
         </div>
