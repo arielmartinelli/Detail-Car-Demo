@@ -5,15 +5,24 @@ import { MapPin } from 'lucide-react';
 import { BRAND_INFO } from '@/data/car-detail-data';
 
 export const HeroSection: React.FC = () => {
+  const mobileBg = `linear-gradient(to bottom, rgba(7, 7, 10, 0.65) 0%, rgba(7, 7, 10, 0.55) 50%, rgba(7, 7, 10, 0.85) 100%), url('https://img.magnific.com/premium-photo/professional-man-with-polishing-machine-polishes-black-car-hood-detailing-center-car-care-scratch-removal-car-shine_338491-26125.jpg?semt=ais_hybrid&w=740&q=80')`;
+  const pcBg = `linear-gradient(to bottom, rgba(7, 7, 10, 0.65) 0%, rgba(7, 7, 10, 0.55) 50%, rgba(7, 7, 10, 0.85) 100%), url('https://t3.ftcdn.net/jpg/15/25/01/54/360_F_1525015475_7EBNENsdhtJFRgk3uVi3NQMezUuT2kUM.jpg')`;
+
   return (
     <section 
       id="inicio" 
-      className="relative w-full min-h-[100dvh] flex flex-col justify-center items-center overflow-hidden bg-cover bg-center bg-no-repeat border-b border-purple-950/50 pt-20 pb-12"
-      style={{
-        backgroundImage: `linear-gradient(to bottom, rgba(7, 7, 10, 0.65) 0%, rgba(7, 7, 10, 0.55) 50%, rgba(7, 7, 10, 0.85) 100%), url('https://t3.ftcdn.net/jpg/15/25/01/54/360_F_1525015475_7EBNENsdhtJFRgk3uVi3NQMezUuT2kUM.jpg')`
-      }}
+      className="relative w-full min-h-[100dvh] flex flex-col justify-center items-center overflow-hidden bg-cover bg-center bg-no-repeat border-b border-purple-950/50 pt-20 pb-12 transition-all duration-300"
     >
-      
+      {/* Responsive Background Layer */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat block sm:hidden pointer-events-none"
+        style={{ backgroundImage: mobileBg }}
+      />
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden sm:block pointer-events-none"
+        style={{ backgroundImage: pcBg }}
+      />
+
       {/* Background radial purple glow overlay */}
       <div className="absolute inset-0 bg-radial-purple pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/15 rounded-full blur-[150px] pointer-events-none" />
