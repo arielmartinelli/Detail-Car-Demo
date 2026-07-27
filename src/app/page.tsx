@@ -1,6 +1,7 @@
 import { Navbar } from '@/components/navbar';
 import { HeroSection } from '@/components/hero-section';
 import { ServicesExplained } from '@/components/services-explained';
+import { PortfolioCarousel } from '@/components/portfolio-carousel';
 import { BeforeAfterSlider } from '@/components/before-after-slider';
 import { QuoteCalculator } from '@/components/quote-calculator';
 import { ContactLocation } from '@/components/contact-location';
@@ -15,6 +16,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <ServicesExplained />
+      <PortfolioCarousel />
       <BeforeAfterSlider />
       <QuoteCalculator />
       <ContactLocation />
