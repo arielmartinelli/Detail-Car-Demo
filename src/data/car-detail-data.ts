@@ -53,6 +53,29 @@ export const BRAND_INFO = {
 
 export const SERVICES_DATA: ServiceItem[] = [
   {
+    id: 'pre-venta',
+    title: 'Preparación Pre-Venta',
+    subtitle: 'Acondicionamiento Integral para Maximizar el Valor de Reventa',
+    category: 'pulido',
+    duration: '1 Día',
+    warranty: 'Valor Comercial Incrementado',
+    popular: true,
+    priceRange: {
+      hatchback: 95000,
+      sedan: 110000,
+      suv: 130000,
+      pickup: 150000,
+    },
+    description: 'Paquete de rejuvenecimiento pensado para publicar o entregar tu auto al mejor precio. Aumenta la atracción visual y acelera la venta.',
+    features: [
+      'Lavado técnico y descontaminado rápido de pintura',
+      'Pulido abrillantador express para revivir el color original',
+      'Limpieza rápida de tapizados y paneles de puertas',
+      'Acondicionado satinado de plásticos y neumáticos',
+    ],
+    recommendedFor: 'Quienes van a vender su auto y quieren obtener el mayor valor en MercadoLibre o agencias.',
+  },
+  {
     id: 'ceramic-9h',
     title: 'Tratamiento Cerámico 9H',
     subtitle: 'Protección Nanotecnológica de Máximo Brillo Espejo',
@@ -107,7 +130,6 @@ export const SERVICES_DATA: ServiceItem[] = [
     category: 'interior',
     duration: '1 Día',
     warranty: 'Acabado Mate Original 0km',
-    popular: true,
     priceRange: {
       hatchback: 85000,
       sedan: 98000,
@@ -171,6 +193,17 @@ export const SERVICES_DATA: ServiceItem[] = [
 ];
 
 export const BEFORE_AFTER_PRESETS: BeforeAfterPreset[] = [
+  {
+    id: 'pre-venta-preset',
+    title: 'Preparación Pre-Venta',
+    vehicle: 'Peugeot 208 GT / Usados',
+    serviceName: 'Acondicionamiento Integral Pre-Venta',
+    beforeLabel: 'Antes: Opaco y Desgastado (Grisáceo)',
+    afterLabel: 'Después: Color Vivo & Brillo Reventa (Saturado 0km)',
+    beforeImg: '/img/preventa_before.jpg',
+    afterImg: '/img/preventa_after.jpg',
+    description: 'Rejuvenecimiento total para publicación en MercadoLibre. Eliminación del aspecto gris opaco y realzado de color.',
+  },
   {
     id: 'paint-correction',
     title: 'Corrección de Laca & Cerámico 9H',
