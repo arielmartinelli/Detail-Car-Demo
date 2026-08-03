@@ -1,79 +1,105 @@
 'use client';
 
 import React from 'react';
-import { MapPin } from 'lucide-react';
-import { BRAND_INFO } from '@/data/car-detail-data';
+import { motion } from 'framer-motion';
+import { Star, DollarSign, CheckCircle2, MapPin, ArrowRight, Calendar } from 'lucide-react';
+import { AnimatedCounters } from './animated-counters';
 
-export const HeroSection: React.FC = () => {
-  const mobileBg = `linear-gradient(to bottom, rgba(7, 7, 10, 0.65) 0%, rgba(7, 7, 10, 0.55) 50%, rgba(7, 7, 10, 0.85) 100%), url('https://img.magnific.com/premium-photo/professional-man-with-polishing-machine-polishes-black-car-hood-detailing-center-car-care-scratch-removal-car-shine_338491-26125.jpg?semt=ais_hybrid&w=740&q=80')`;
-  const pcBg = `linear-gradient(to bottom, rgba(7, 7, 10, 0.65) 0%, rgba(7, 7, 10, 0.55) 50%, rgba(7, 7, 10, 0.85) 100%), url('https://t3.ftcdn.net/jpg/15/25/01/54/360_F_1525015475_7EBNENsdhtJFRgk3uVi3NQMezUuT2kUM.jpg')`;
+interface HeroSectionProps {
+  onOpenBooking: () => void;
+}
 
+export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBooking }) => {
   return (
     <section 
       id="inicio" 
-      className="relative w-full min-h-[100dvh] flex flex-col justify-center items-center overflow-hidden bg-cover bg-center bg-no-repeat border-b border-purple-950/50 pt-20 pb-12 transition-all duration-300"
+      className="relative w-full min-h-[100dvh] flex flex-col justify-between overflow-hidden bg-cover bg-center bg-no-repeat pt-28 pb-12 border-b border-purple-950/50"
+      style={{
+        backgroundImage: `linear-gradient(to bottom, rgba(7, 7, 10, 0.75) 0%, rgba(7, 7, 10, 0.65) 50%, rgba(7, 7, 10, 0.95) 100%), url('https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&q=80&w=1800')`
+      }}
     >
-      {/* Responsive Background Layer */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat block sm:hidden pointer-events-none"
-        style={{ backgroundImage: mobileBg }}
-      />
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden sm:block pointer-events-none"
-        style={{ backgroundImage: pcBg }}
-      />
-
-      {/* Background radial purple glow overlay */}
+      
+      {/* Background Radial Glow */}
       <div className="absolute inset-0 bg-radial-purple pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/15 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-purple-600/15 rounded-full blur-[160px] pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center justify-center my-auto">
-        
-        {/* Status Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-950/90 border border-purple-500/50 text-purple-300 text-xs font-semibold mb-6 backdrop-blur-md shadow-xl shadow-purple-950/60">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-          </span>
-          <MapPin className="w-3.5 h-3.5 text-purple-400" />
-          <span>📍 Córdoba, Argentina • Turnos por WhatsApp</span>
+      {/* Hero Main Body */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full my-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          {/* Left Column: Headlines & Badges */}
+          <motion.div 
+            className="lg:col-span-8 text-left"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            {/* Status Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-950/80 border border-purple-500/40 text-purple-300 text-xs font-semibold mb-6 backdrop-blur-md">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              <MapPin className="w-3.5 h-3.5 text-purple-400" />
+              <span>📍 Córdoba Capital • Turnos Abiertos</span>
+            </div>
+
+            {/* Giant Title inspired by Vivid Wash Reference */}
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.05] uppercase">
+              DONDE TU AUTO ENCUENTRA SU{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-300 via-lime-400 to-emerald-400 font-mono">
+                MÁXIMO BRILLO
+              </span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="mt-5 text-base sm:text-xl text-slate-200 max-w-2xl font-normal leading-relaxed">
+              Detailing Profesional de alta precisión en Córdoba. Tratamientos nanocerámicos 9H, pulido corrección de laca y restauraciones de showroom.
+            </p>
+
+            {/* Connected Floating Badge Nodes (Vivid Wash Reference Style) */}
+            <div className="mt-8 flex flex-wrap gap-2.5">
+              <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-purple-950/60 border border-purple-500/30 text-slate-200 text-xs font-bold shadow-md">
+                <Star className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+                <span>Calidad Premium Garantizada</span>
+              </div>
+              <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-purple-950/60 border border-purple-500/30 text-slate-200 text-xs font-bold shadow-md">
+                <DollarSign className="w-3.5 h-3.5 text-lime-400" />
+                <span>Presupuestos Sin Sorpresas</span>
+              </div>
+              <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-purple-950/60 border border-purple-500/30 text-slate-200 text-xs font-bold shadow-md">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                <span>Detailing de Confianza</span>
+              </div>
+            </div>
+
+            {/* Primary Action CTAs */}
+            <div className="mt-10 flex flex-col sm:flex-row items-center gap-4">
+              <button
+                onClick={onOpenBooking}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-sm font-extrabold text-black bg-gradient-to-r from-lime-400 to-emerald-400 hover:from-lime-300 hover:to-emerald-300 shadow-xl shadow-lime-400/30 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0"
+              >
+                <Calendar className="w-5 h-5" />
+                <span>Agendar Mi Turno (Por Pasos)</span>
+              </button>
+
+              <a
+                href="#servicios"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-sm font-bold text-white glass-panel border border-purple-500/40 hover:border-purple-400 transition-all"
+              >
+                <span>Ver Servicios & Resultados</span>
+                <ArrowRight className="w-4 h-4 text-purple-400" />
+              </a>
+            </div>
+          </motion.div>
+
         </div>
 
-        {/* Enlarged Main Headline */}
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)]">
-          Más que un lavado,{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-300 to-indigo-300">
-            una transformación
-          </span>
-        </h1>
-
-        {/* Subtitle */}
-        <p className="mt-6 text-lg sm:text-2xl text-slate-100 max-w-3xl mx-auto font-medium leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-          Detailing Profesional en Córdoba. Tratamientos Cerámicos 9H, pulido corrección de laca, limpieza técnica de interiores y PPF.
-        </p>
-
-        {/* Clean Text Action Buttons */}
-        <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto px-4 sm:px-0">
-          <a
-            href={`https://wa.me/${BRAND_INFO.whatsappNumber}?text=${encodeURIComponent(
-              'Hola BM Car Detail! Quisiera consultar la disponibilidad de turnos en Córdoba.'
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-sm sm:text-base font-bold text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 shadow-xl shadow-purple-950/80 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
-          >
-            Consultar Turno WhatsApp
-          </a>
-
-          <a
-            href="#cotizador"
-            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-sm sm:text-base font-semibold text-white glass-panel border border-purple-500/50 hover:border-purple-400 transition-all active:scale-95 shadow-lg bg-[#07070a]/70"
-          >
-            Cotizar Mi Auto
-          </a>
-        </div>
+        {/* Animated Live Counters Row */}
+        <AnimatedCounters />
 
       </div>
+
     </section>
   );
 };
