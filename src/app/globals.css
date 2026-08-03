@@ -1,11 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-purple-primary: #7c3aed;
-  --color-purple-dark: #07070a;
-  --color-purple-accent: #a855f7;
-  --color-lime-accent: #ccff00;
-  --color-emerald-accent: #10b981;
+  --color-red-primary: #dc2626;
+  --color-red-dark: #991b1b;
+  --color-red-accent: #ef4444;
+  --color-[#07070a]: #07070a;
 }
 
 :root {
@@ -20,12 +19,12 @@ body {
   overflow-x: hidden;
 }
 
-/* Glassmorphism Panel Utilities */
+/* Glassmorphism Panel Utilities (Black & Grays) */
 .glass-panel {
-  background: rgba(13, 14, 22, 0.75);
+  background: rgba(18, 19, 26, 0.8);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(168, 85, 247, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .glass-panel-hover {
@@ -33,19 +32,19 @@ body {
 }
 
 .glass-panel-hover:hover {
-  background: rgba(20, 22, 35, 0.85);
-  border-color: rgba(204, 255, 0, 0.5);
+  background: rgba(26, 28, 38, 0.9);
+  border-color: rgba(239, 68, 68, 0.5);
   transform: translateY(-3px);
-  box-shadow: 0 12px 30px -10px rgba(124, 58, 237, 0.35);
+  box-shadow: 0 12px 30px -10px rgba(220, 38, 38, 0.3);
 }
 
-/* Neon Violet Radial Background Glow */
-.bg-radial-purple {
-  background: radial-gradient(circle at 50% 0%, rgba(124, 58, 237, 0.15) 0%, rgba(7, 7, 10, 0) 70%);
+/* Red Radial Background Glow */
+.bg-radial-red {
+  background: radial-gradient(circle at 50% 0%, rgba(220, 38, 38, 0.12) 0%, rgba(7, 7, 10, 0) 70%);
 }
 
-.neon-purple-glow {
-  box-shadow: 0 0 40px -10px rgba(124, 58, 237, 0.3);
+.neon-red-glow {
+  box-shadow: 0 0 35px -10px rgba(220, 38, 38, 0.3);
 }
 
 /* 3-Row Infinite Marquee Animations */
@@ -75,29 +74,7 @@ body {
   animation: marquee-right 28s linear infinite;
 }
 
-/* Soap Bubbles Keyframe Animations */
-@keyframes bubbleFloat {
-  0% {
-    transform: translateY(0) scale(0.9);
-    opacity: 0;
-  }
-  20% {
-    opacity: 0.15;
-  }
-  80% {
-    opacity: 0.15;
-  }
-  100% {
-    transform: translateY(-800px) scale(1.1);
-    opacity: 0;
-  }
-}
-
-.animate-bubble-float {
-  animation: bubbleFloat 16s ease-in-out infinite;
-}
-
-/* Custom Scrollbar Styling */
+/* Custom Scrollbar Styling (Black & Red Accent) */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -108,10 +85,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2e1065;
+  background: #27272a;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #7c3aed;
+  background: #dc2626;
 }

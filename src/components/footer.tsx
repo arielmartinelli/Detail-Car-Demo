@@ -2,32 +2,25 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Shield, MapPin, Clock, MessageCircle, Heart, Award } from 'lucide-react';
+import { MapPin, Clock, MessageCircle, Heart } from 'lucide-react';
 import { BRAND_INFO } from '@/data/car-detail-data';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#040406] border-t border-purple-950/60 pt-16 pb-12 text-slate-400 text-sm relative">
+    <footer className="bg-[#040406] border-t border-gray-800/60 pt-14 pb-10 text-slate-400 text-sm relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-purple-950/40">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-10 border-b border-gray-800/40">
           
           {/* Brand Info */}
           <div className="lg:col-span-4 flex flex-col gap-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-indigo-900 p-0.5 shadow-lg shadow-purple-600/30">
-                <div className="w-full h-full bg-[#0d0e15] rounded-[10px] flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-purple-400" />
-                </div>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-extrabold text-lg tracking-wider text-white">
-                  BM <span className="text-purple-400">CAR DETAIL</span>
-                </span>
-                <span className="text-[10px] text-purple-300/70 tracking-widest font-mono uppercase">
-                  {BRAND_INFO.subtagline}
-                </span>
-              </div>
+            <div className="flex flex-col">
+              <span className="font-black text-xl tracking-wider text-white">
+                BM <span className="text-red-500">CAR DETAIL</span>
+              </span>
+              <span className="text-[10px] text-slate-500 tracking-widest font-mono uppercase mt-1">
+                Detailing Premium • Córdoba
+              </span>
             </div>
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
@@ -39,7 +32,7 @@ export const Footer: React.FC = () => {
                 href={BRAND_INFO.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl glass-panel border border-purple-800/40 flex items-center justify-center text-slate-300 hover:text-purple-400 hover:border-purple-500 transition-colors"
+                className="w-9 h-9 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center text-slate-400 hover:text-red-500 hover:border-red-500/50 transition-colors"
                 aria-label="Instagram BM Car Detail"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -50,7 +43,7 @@ export const Footer: React.FC = () => {
                 href={`https://wa.me/${BRAND_INFO.whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl glass-panel border border-purple-800/40 flex items-center justify-center text-slate-300 hover:text-emerald-400 hover:border-emerald-500 transition-colors"
+                className="w-9 h-9 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center text-slate-400 hover:text-red-500 hover:border-red-500/50 transition-colors"
                 aria-label="WhatsApp BM Car Detail"
               >
                 <MessageCircle className="w-4 h-4" />
@@ -60,36 +53,30 @@ export const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div className="lg:col-span-3">
-            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4 font-mono">Navegación</h4>
+            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Navegación</h4>
             <ul className="space-y-2.5 text-xs">
               <li>
-                <Link href="#inicio" className="hover:text-purple-300 transition-colors">Inicio</Link>
+                <Link href="#inicio" className="hover:text-red-500 transition-colors">Inicio</Link>
               </li>
               <li>
-                <Link href="#antes-despues" className="hover:text-purple-300 transition-colors">Resultados Antes / Después</Link>
+                <Link href="#servicios" className="hover:text-red-500 transition-colors">Servicios</Link>
               </li>
               <li>
-                <Link href="#servicios" className="hover:text-purple-300 transition-colors">Catálogo de Servicios</Link>
+                <Link href="#galeria" className="hover:text-red-500 transition-colors">Galería de Trabajos</Link>
               </li>
               <li>
-                <Link href="#cotizador" className="hover:text-purple-300 transition-colors">Calculadora de Presupuesto</Link>
-              </li>
-              <li>
-                <Link href="#proceso" className="hover:text-purple-300 transition-colors">Proceso de Trabajo</Link>
-              </li>
-              <li>
-                <Link href="#opiniones" className="hover:text-purple-300 transition-colors">Reseñas de Clientes</Link>
+                <Link href="#contacto" className="hover:text-red-500 transition-colors">Contacto</Link>
               </li>
             </ul>
           </div>
 
           {/* Location & Hours */}
           <div className="lg:col-span-5 flex flex-col gap-3">
-            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-2 font-mono">Ubicación & Atención</h4>
+            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-2">Ubicación & Atención</h4>
             
-            <div className="glass-panel p-4 rounded-2xl border border-purple-900/30 space-y-3 text-xs">
+            <div className="bg-gray-900/50 p-4 rounded-2xl border border-gray-800 space-y-3 text-xs">
               <div className="flex items-start gap-2.5 text-slate-300">
-                <MapPin className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold text-white">Córdoba Capital, Argentina</span>
                   <span className="block text-slate-400 text-[11px]">Atención exclusiva con turno previo agendado.</span>
@@ -97,16 +84,11 @@ export const Footer: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-2.5 text-slate-300">
-                <Clock className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
+                <Clock className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold text-white">Horarios de Recepción:</span>
                   <span className="block text-slate-400 text-[11px]">{BRAND_INFO.schedule}</span>
                 </div>
-              </div>
-
-              <div className="flex items-center gap-2.5 text-slate-300">
-                <Award className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <span className="text-emerald-300 font-semibold">Garantía Escrita en Tratamientos Cerámicos</span>
               </div>
             </div>
           </div>
@@ -115,9 +97,9 @@ export const Footer: React.FC = () => {
 
         {/* Bottom copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} BM Car Detail • Detailing Profesional Córdoba. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} BM Car Detail • Detailing Profesional Córdoba.</p>
           <p className="flex items-center gap-1">
-            Diseñado & Desarrollado con tecnología Next.js <Heart className="w-3 h-3 text-purple-500 fill-purple-500" />
+            Hecho con <Heart className="w-3 h-3 text-red-500 fill-red-500" /> en Córdoba
           </p>
         </div>
 

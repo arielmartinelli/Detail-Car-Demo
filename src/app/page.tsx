@@ -5,13 +5,9 @@ import { Navbar } from '@/components/navbar';
 import { HeroSection } from '@/components/hero-section';
 import { ServicesExplained } from '@/components/services-explained';
 import { InfiniteMarqueeGallery } from '@/components/infinite-marquee-gallery';
-import { BeforeAfterSlider } from '@/components/before-after-slider';
-import { QuoteCalculator } from '@/components/quote-calculator';
-import { TestimonialsSection } from '@/components/testimonials-section';
 import { ContactLocation } from '@/components/contact-location';
 import { Footer } from '@/components/footer';
 import { WhatsappFloat } from '@/components/whatsapp-float';
-import { GlowingBubblesBg } from '@/components/glowing-bubbles-bg';
 import { ServiceDetailModal } from '@/components/service-detail-modal';
 import { BookingWizardModal } from '@/components/booking-wizard-modal';
 import { ServiceItem } from '@/data/car-detail-data';
@@ -28,33 +24,23 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#07070a] text-slate-100 flex flex-col relative overflow-hidden">
-      <GlowingBubblesBg />
       
       {/* Top Floating Navbar */}
       <Navbar onOpenBooking={() => handleOpenBooking()} />
 
-      {/* 1. Hero Section (Vivid Wash Reference Aesthetic with Foam Wash Photo & Animated Counters) */}
+      {/* 1. Hero Section — Title + 2 CTAs only */}
       <HeroSection onOpenBooking={() => handleOpenBooking()} />
 
-      {/* 2. Servicios & Resultados Catalog */}
+      {/* 2. Servicios — Large photo, title, brief description */}
       <ServicesExplained
         onSelectService={(service) => setSelectedService(service)}
         onOpenBooking={(serviceId) => handleOpenBooking(serviceId)}
       />
 
-      {/* 3. 3-Row Infinite Marquee Gallery (Moving in Alternating Directions) */}
+      {/* 3. Gallery — Infinite Marquee */}
       <InfiniteMarqueeGallery />
 
-      {/* 4. Interactive Before & After Slider */}
-      <BeforeAfterSlider />
-
-      {/* 5. Quote Calculator */}
-      <QuoteCalculator />
-
-      {/* 6. Testimonials & Verified 5-Star Reviews */}
-      <TestimonialsSection />
-
-      {/* 7. Agendá Tu Turno & Ubicación */}
+      {/* 4. Contacto & Ubicación */}
       <ContactLocation onOpenBooking={() => handleOpenBooking()} />
 
       {/* Footer & Floating WhatsApp */}

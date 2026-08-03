@@ -11,7 +11,7 @@ export const WhatsappFloat: React.FC = () => {
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
       {/* Tooltip */}
       {tooltipOpen && (
-        <div className="relative glass-panel px-4 py-3 rounded-2xl border border-emerald-500/40 shadow-2xl max-w-[260px] text-xs animate-in fade-in slide-in-from-bottom-3 duration-300 bg-[#0c0d16]/95">
+        <div className="relative bg-[#0c0d16]/95 backdrop-blur-xl px-4 py-3 rounded-2xl border border-gray-700 shadow-2xl max-w-[260px] text-xs animate-in fade-in slide-in-from-bottom-3 duration-300">
           <button
             onClick={() => setTooltipOpen(false)}
             className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center border border-slate-700"
@@ -20,16 +20,16 @@ export const WhatsappFloat: React.FC = () => {
             <X className="w-3 h-3" />
           </button>
           <div className="flex items-center gap-1.5 mb-1">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="font-bold text-emerald-400">Atención en Córdoba</span>
+            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+            <span className="font-bold text-red-500">¿Tenés dudas?</span>
           </div>
           <p className="text-slate-200 font-medium leading-snug">
-            ¿Tenés dudas o querés cotizar? Escribinos directo por WhatsApp.
+            Escribinos por WhatsApp y te asesoramos.
           </p>
         </div>
       )}
 
-      {/* Floating Official Wikimedia WhatsApp Icon */}
+      {/* Floating WhatsApp Icon */}
       <a
         href={`https://wa.me/${BRAND_INFO.whatsappNumber}?text=${encodeURIComponent(
           'Hola BM Car Detail! Quisiera consultar la disponibilidad de turnos en Córdoba.'
